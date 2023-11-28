@@ -16,4 +16,12 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser())
 
+
+// Import routes
+import supplierRoutes from './routes/supplier.route.js';
+
+app.use('/supplier', supplierRoutes)
+
+
+
 export { app };

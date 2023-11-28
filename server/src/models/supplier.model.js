@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const supplierSchema = new Schema(
     {
@@ -12,17 +12,14 @@ const supplierSchema = new Schema(
         },
         businessName: {
             type: String,
-            required: true,
             trim: true,
         },
         firstName: {
             type: String,
-            required: true,
             trim: true,
         },
         lastName: {
             type: String,
-            required: true,
             trim: true,
         },
         email: {
@@ -37,8 +34,8 @@ const supplierSchema = new Schema(
         },
         avatar: {
             type: String, // Cloudinary url
-            required: true,
         },
+        isRegistered: { type: Boolean, default: false },
     },
     { timestamps: true }
 );
