@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-export function generateUniqueId(fields, length) {
+export function generateUniqueId(fields: Array<string>, length: number): string {
     let result = "";
 
     for (let i = 0; i < length; i++) {

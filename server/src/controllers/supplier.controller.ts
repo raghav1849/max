@@ -1,11 +1,11 @@
-import { asyncHandler } from "../utils/asyncHandler.js";
-import { ApiError } from "../utils/ApiError.js";
-import Supplier from "../models/supplier.model.js";
-import { ApiResponse } from "../utils/ApiResponse.js";
-import { generateUniqueId } from "../utils/getUniqueString.js";
+import { asyncHandler } from "../utils/asyncHandler.ts";
+import { ApiError } from "../utils/ApiError.ts";
+import Supplier from "../models/supplier.model.ts";
+import { ApiResponse } from "../utils/ApiResponse.ts";
+import { generateUniqueId } from "../utils/getUniqueString.ts";
 
 // Creating a new supplier
-export const createSupplier = asyncHandler(async (req, res) => {
+export const createSupplier = asyncHandler(async (req : any, res : any) => {
     const { email, password } = req.body;
 
     if ([email, password].some((item) => item.trim() === "")) {
@@ -29,15 +29,15 @@ export const createSupplier = asyncHandler(async (req, res) => {
 
         await Supplier.create({ supplierId, email, password });
 
-        const response = await Supplier.findOne({ email }).select(
+        const response : Object = await Supplier.findOne({ email }).select(
             "-isRegistered -password"
         );
 
         res.status(201).json(
             new ApiResponse(response, "Supplier created successfully!")
         );
-    } catch (error) {
-        res.status(400).json(new ApiError(error));
+    } catch (error : any) {
+        res.status(400).json(new ApiError(error.message));
     }
 });
 

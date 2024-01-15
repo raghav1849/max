@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net" modified="2023-11-30T16:31:11.806Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="eDmkQozql57D_TEbEaQh" version="22.1.5" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="supplier creation wireframes">
+    <mxGraphModel dx="660" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-23" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="20" width="680" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-1" value="Supplier creation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="363" y="30" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="C__Hxp7GXB9SpTMF9qGF-2" target="C__Hxp7GXB9SpTMF9qGF-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="110" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-3" value="Sign up" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-4" value="Email" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="140" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-5" value="Password" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="180" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-10" value="Supplier will sign-up with its email and password." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="230" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-17" value="supplierId will get generated" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="335" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-20" value="&lt;ul&gt;&lt;li&gt;supplierId&lt;/li&gt;&lt;li&gt;email&lt;/li&gt;&lt;li&gt;password (encrypted)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="520" y="140" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-22" value="Data will be stored in the supplier collection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="532.5" y="210" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-24" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="685" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-25" value="Supplier registration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="343" y="360" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-26" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="400" width="120" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-27" value="Registration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="400" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-28" value="businessName" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="440" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-29" value="firstName" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="470" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-30" value="lastName" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="500" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-31" value="mobile" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="530" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-32" value="avatar (image)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="560" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-35" value="" style="shape=link;html=1;rounded=0;width=30.3125;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.009;entryY=0.548;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C__Hxp7GXB9SpTMF9qGF-26">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="248.92" y="501.36" as="sourcePoint" />
+            <mxPoint x="399.99999999999994" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-37" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;avatar will be uploaded through&lt;br&gt;multer &amp;amp; cloudinary.&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="C__Hxp7GXB9SpTMF9qGF-35">
+          <mxGeometry x="-0.0109" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C__Hxp7GXB9SpTMF9qGF-39" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="400" width="120" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

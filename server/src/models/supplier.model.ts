@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import jwt from "jsonwebtoken";
+import { sign, Secret } from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
 const supplierSchema = new Schema(
@@ -46,29 +46,31 @@ supplierSchema.pre("save", async function (next) {
     next();
 });
 
-supplierSchema.methods.isPasswordCorrect = async function (password) {
+supplierSchema.methods.isPasswordCorrect = async function (password: string) {
     return await bcrypt.compare(password, this.password);
 };
 
 supplierSchema.methods.generateAccessToken = async function () {
-    return jwt.sign(
+    const secret: Secret | any = process.env.ACCESS_TOKEN_SECRET;
+    return sign(
         {
             _id: this._id,
             suppliedId: this.ssupplierId,
             email: this.email,
             businessName: this.businessName,
         },
-        process.env.ACCESS_TOKEN_SECRET,
+        secret,
         { expiresIn: process.env.ACCESS_TOKEN_EXPIRY }
     );
 };
 
 supplierSchema.methods.generateRefreshToken = async function () {
-    return jwt.sign(
+    const refreshToken: string | any = process.env.REFRESH_TOKEN_SECRET
+    return sign(
         {
             _id: this._id,
         },
-        process.env.REFRESH_TOKEN_SECRET,
+        refreshToken,
         { expiresIn: process.env.REFRESH_TOKEN_EXPIRY }
     );
 };

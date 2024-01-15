@@ -1,0 +1,7 @@
+schema: 'path/to/user.graphql'
+generates:
+  path/to/generated/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
