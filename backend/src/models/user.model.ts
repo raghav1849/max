@@ -16,6 +16,7 @@ const userSchema = new Schema<IUser>(
     {
         userId: {
             type: String,
+            default:() =>  `use_${(new mongoose.Types.ObjectId().toString())}`,
             unique: true,
         },
         username: {
@@ -43,7 +44,6 @@ const userSchema = new Schema<IUser>(
     }
 );
 
-
 // Convert password to hash string
 userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) return next();
@@ -53,7 +53,7 @@ userSchema.pre("save", async function (next) {
 });
 
 // Generate access token
- userSchema.methods.generateAccessToken = function() : string {
+userSchema.methods.generateAccessToken = function (): string {
     const secret: Secret = process.env.ACCESS_TOKEN_SECRET ?? "";
 
     return sign(
@@ -84,6 +84,6 @@ userSchema.methods.generateRefreshToken = function () {
     );
 };
 
-const UserModel = mongoose.model("users", userSchema);
+const UserModel = mongoose.model<IUser>("users", userSchema);
 
 export default UserModel;

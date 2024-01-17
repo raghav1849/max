@@ -1,14 +1,22 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
 
-const videoSchema = new Schema(
+interface IPlaybackHistory extends Document {
+    videoId: string;
+    userId: string;
+    title: string;
+    description: string;
+    thumbnail: string;
+}
+
+const videoSchema = new Schema<IPlaybackHistory>(
     {
         videoId: {
             type: String,
             unique: true,
+            default: () => `vid_${new mongoose.Types.ObjectId().toString()}`,
         },
         userId: {
             type: String,
-            unique: true,
             ref: "users",
             required: true,
             index: true,
@@ -24,18 +32,13 @@ const videoSchema = new Schema(
         },
         thumbnail: {
             type: String,
-        }
+        },
     },
     {
         timestamps: true,
     }
 );
 
-videoSchema.pre("save", function () {
-    const id = new mongoose.Types.ObjectId().toString();
-    this.videoId = `vid_${id}`;
-});
-
-const VideoModel = mongoose.model("videos", videoSchema);
+const VideoModel = mongoose.model<IPlaybackHistory>("videos", videoSchema);
 
 export default VideoModel;
