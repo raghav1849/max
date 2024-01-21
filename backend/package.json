@@ -46,6 +46,7 @@
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.0.3",
         "reflect-metadata": "^0.2.1",
-        "type-graphql": "^1.1.1"
+        "type-graphql": "^1.1.1",
+        "zod": "^3.22.4"
     }
 }

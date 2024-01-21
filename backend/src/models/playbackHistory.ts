@@ -5,6 +5,8 @@ interface IPlaybackHistory extends Document {
     userId: string;
     videoId: string;
     durationWatched: number;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 const playbackHistorySchema = new Schema<IPlaybackHistory>(

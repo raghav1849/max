@@ -8,6 +8,8 @@ interface IUser extends Document {
     email: string;
     password: string;
     refreshToken: string;
+    createdAt: Date;
+    updatedAt: Date;
     generateAccessToken: () => string;
     generateRefreshToken: () => string;
 }

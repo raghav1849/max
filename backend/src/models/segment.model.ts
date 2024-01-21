@@ -1,15 +1,17 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-interface IVideoSegment extends Document {
+interface ISegment extends Document {
     segmentId: string;
     videoId: string;
     segmentNumber: number;
     url: string;
     bitrate: number;
     resolution: string;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
-const videoSegmentSchema = new Schema<IVideoSegment>(
+const videoSegmentSchema = new Schema<ISegment>(
     {
         segmentId: {
             type: String,
@@ -45,7 +47,7 @@ const videoSegmentSchema = new Schema<IVideoSegment>(
     { timestamps: true }
 );
 
-const VideoSegmentModel = mongoose.model<IVideoSegment>(
+const VideoSegmentModel = mongoose.model<ISegment>(
     "videoSegments",
     videoSegmentSchema
 );

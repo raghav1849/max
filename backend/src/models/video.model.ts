@@ -1,14 +1,16 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-interface IPlaybackHistory extends Document {
+interface IVideo extends Document {
     videoId: string;
     userId: string;
     title: string;
     description: string;
     thumbnail: string;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
-const videoSchema = new Schema<IPlaybackHistory>(
+const videoSchema = new Schema<IVideo>(
     {
         videoId: {
             type: String,
@@ -39,6 +41,6 @@ const videoSchema = new Schema<IPlaybackHistory>(
     }
 );
 
-const VideoModel = mongoose.model<IPlaybackHistory>("videos", videoSchema);
+const VideoModel = mongoose.model<IVideo>("videos", videoSchema);
 
 export default VideoModel;
